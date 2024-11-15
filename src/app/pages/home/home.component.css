@@ -1,4 +1,4 @@
-.container__articles{
+/* .container__articles{
   margin-top: 30px;
 
   display: flex;
@@ -6,4 +6,37 @@
   justify-content: center;
 }
 
+ */
 
+ /* --------------------------- ADD RESPONSIVE  */
+
+
+ .container__articles {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: row; /* Padrão para telas maiores */
+  justify-content: center;
+  gap: 20px; /* Adiciona espaçamento entre os artigos */
+  flex-wrap: wrap; /* Permite que os artigos quebrem linha em telas menores */
+  padding: 10px; /* Espaçamento interno para evitar cortes nas bordas */
+}
+
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
+  .container__articles {
+    flex-direction: column; /* Organiza os artigos em uma coluna */
+    align-items: center; /* Centraliza os itens */
+    gap: 15px; /* Reduz o espaçamento entre os artigos */
+    padding: 5px; /* Reduz o espaçamento interno */
+  }
+}
+
+/* Ajustes para telas muito grandes (desktop widescreen) */
+@media (min-width: 1200px) {
+  .container__articles {
+    max-width: 1200px; /* Limita a largura máxima do container */
+    margin: 30px auto; /* Centraliza o container horizontalmente */
+    gap: 30px; /* Aumenta o espaçamento entre os artigos em telas grandes */
+  }
+}

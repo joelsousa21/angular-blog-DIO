@@ -1,5 +1,34 @@
-header {
+/* header {
   margin-top: 15px;
   display: flex;
   justify-content: center;
+} */
+
+
+ /* --------------------------- ADD RESPONSIVE  */
+
+ header {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centraliza verticalmente os itens no header */
+  width: 100%; /* Garante que o header ocupe toda a largura da tela */
+  box-sizing: border-box; /* Inclui padding e bordas na largura total */
+  padding: 10px; /* Adiciona espaçamento interno */
+}
+
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Organiza os itens em uma coluna para melhor visualização */
+    padding: 5px; /* Reduz o espaçamento interno */
+  }
+}
+
+/* Ajustes para telas muito grandes (desktop widescreen) */
+@media (min-width: 1200px) {
+  header {
+    max-width: 1200px; /* Limita a largura máxima do header */
+    margin: 15px auto; /* Centraliza o header horizontalmente */
+  }
 }

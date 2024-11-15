@@ -1,4 +1,4 @@
-.container__content{
+/* .container__content{
 
   width: 100%;
   height: 100vh;
@@ -26,4 +26,65 @@
 .content__description > p{
   margin-top: 20px;
   color: rgb(198, 197, 197);
+} */
+
+
+/* --------------------------- ADD RESPONSIVE  */
+
+.container__content {
+  width: 100%;
+  height: auto; /* Ajusta a altura conforme o conteúdo */
+  margin-top: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px; /* Adiciona espaçamento interno */
+}
+
+.content__cover > img {
+  border: 5px solid rgb(144, 144, 144);
+  border-radius: 5px;
+  width: 100%; /* Ajusta para ocupar o máximo da largura disponível */
+  max-width: 500px; /* Limita o tamanho em telas maiores */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.content__description {
+  margin-top: 15px;
+  text-align: center; /* Centraliza o texto */
+  padding: 0 10px; /* Adiciona espaçamento lateral */
+}
+
+.content__description > p {
+  margin-top: 20px;
+  color: rgb(198, 197, 197);
+}
+
+/* Ajustes para telas menores (mobile) */
+@media (max-width: 768px) {
+  .container__content {
+    margin-top: 10px;
+    padding: 5px;
+  }
+
+  .content__cover > img {
+    width: 90%; /* Ocupa 90% da largura da tela */
+  }
+
+  .content__description {
+    padding: 0 5px;
+  }
+}
+
+/* Ajustes para telas muito grandes (desktop widescreen) */
+@media (min-width: 1200px) {
+  .container__content {
+    max-width: 1200px; /* Centraliza e limita a largura máxima */
+    margin: 20px auto;
+  }
+
+  .content__cover > img {
+    max-width: 700px; /* Aumenta o limite de largura em telas maiores */
+  }
 }
